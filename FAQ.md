@@ -6,7 +6,7 @@ No, non è obbligatorio fare l’orale. Se nel test scritto si raggiungono almen
 
 #### Non ho ottenuto le propedeuticità. Posso lo stesso effettuare l’esame?
 
-No. Se no, non si chiamerebbero “propedeuticità”, e non le avremmo messe.
+Non ci sono propedeuticità. L'aver superato Sistemi Operativi è FORTEMENTE consigliato
 
 #### Cosa succede se vengo “beccato” a parlare o a copiare all’esame?
 
