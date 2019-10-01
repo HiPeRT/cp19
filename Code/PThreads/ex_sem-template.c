@@ -30,10 +30,9 @@ void *body(void *arg)
   int i,j;
   
   for (j=0; j<40; j++) {
-    sem_wait(&mysem);
-    for (i=0; i<1000000; i++);
+    for (i=0; i<10000; i++)
+		;
     fprintf(stderr,(char *)arg);
-    sem_post(&mysem);
   }
 
   return NULL;
