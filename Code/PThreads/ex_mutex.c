@@ -29,12 +29,13 @@ void *body(void *arg)
 {
   int i,j;
   
+  pthread_mutex_lock(&mymutex);
   for (j=0; j<40; j++) {
-    pthread_mutex_lock(&mymutex);
-    for (i=0; i<1000000; i++);
+    for (i=0; i<1000000; i++)
+		;
     fprintf(stderr,(char *)arg);
-    pthread_mutex_unlock(&mymutex);
   }
+  pthread_mutex_unlock(&mymutex);
 
   return NULL;
 }
