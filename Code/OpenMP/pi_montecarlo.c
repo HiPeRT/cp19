@@ -46,7 +46,7 @@ int main()
 {
     unsigned long long t_start, t_delta, counter=0;
     float in_count = 0, tot_count = 0;
-	unsigned long long tot_iterations = 10000L;
+	unsigned long long tot_iterations = 10000000L;
 
 	tot_iterations /= N_THREADS;
 	_printf("[get_pi] tot_iterations = %llu\n", tot_iterations); 
@@ -62,7 +62,7 @@ int main()
 #ifdef _OPENMP
 		_printf("[Thread %d/%d]\n", omp_get_thread_num(), omp_get_num_threads());
 #endif
-		
+		//tot_iterations/N_THREADS; // Uncomment this for speed-up. Otherwise, scale-up
 		for(counter=0; counter<tot_iterations; counter++)
 		{
 			float x = randNumGen();
