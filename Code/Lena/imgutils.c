@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include <stdlib.h>
 
+#include <math.h>
+
 #define fileHeaderSize 40
 #define bmpHeaderSize 14
 #define noColor 256
@@ -165,4 +167,26 @@ unsigned char * BMPread(const char *fname, unsigned int *width, unsigned int *he
 	
 	free(buf);
 	return outimg;
+}
+
+// This does not work properly
+void getGaussian(int height, int width, double sigma)
+{
+    // double sum=0.0;
+    // int i,j;
+
+    // for (i=0 ; i<height ; i++) {
+        // for (j=0 ; j<width ; j++) {
+            // kernel[i][j] = exp(-(i*i+j*j)/(2*sigma*sigma))/(2*M_PI*sigma*sigma);
+            // sum += kernel[i][j];
+        // }
+    // }
+
+    // for (i=0 ; i<height ; i++) {
+        // for (j=0 ; j<width ; j++) {
+            // kernel[i][j] /= sum;
+        // }
+    // }
+
+    // return kernel;
 }

@@ -1,80 +1,90 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "imgutils.h"
 
-#define _printf printf
+//#define _printf(...) printf(__VA_ARGS__)
+#define _printf(...)
 
-#define KERNEL_SIZE 5
+#define KERNEL_SIZE 7
 
-#if KERNEL_SIZE == 5
+#if KERNEL_SIZE == 7
+
 float kernel[KERNEL_SIZE][KERNEL_SIZE] =
 {
-	{ 1/44., 1/44., 2/44., 1/44., 1/44. },
-	{ 1/44., 2/44., 3/44., 2/44., 1/44. },
-	{ 2/44., 3/44., 4/44., 3/44., 2/44. },
-	{ 1/44., 2/44., 3/44., 2/44., 1/44. },
-	{ 1/44., 1/44., 2/44., 1/44., 1/44. },
+	{ 1., 1., 1., 2., 1., 1., 1. },
+	{ 1., 1., 2., 2., 2., 1., 1. },
+	{ 1., 2., 3., 3., 3., 2., 1. },
+	{ 2., 2., 3., 4., 3., 2., 2. },
+	{ 1., 2., 3., 3., 3., 2., 1. },
+	{ 1., 1., 2., 2., 2., 1., 1. },
+	{ 1., 1., 1., 2., 1., 1., 1. },
 };
+unsigned int coeff = 84;
+
+#elif KERNEL_SIZE == 5
+
+float kernel[KERNEL_SIZE][KERNEL_SIZE] =
+{
+	{ 1.,  4.,  7.,  4., 1. },
+	{ 4., 16., 26., 16., 4. },
+	{ 7., 26., 41., 26., 7. },
+	{ 4., 16., 26., 16., 4. },
+	{ 1.,  4.,  7.,  4., 1. },
+};
+unsigned int coeff = 273;
+
 #elif KERNEL_SIZE == 3
+
 float kernel[KERNEL_SIZE][KERNEL_SIZE] =
 {
-	{ 1/16., 2/16., 1/16. },
-	{ 2/16., 4/16., 2/16. },
-	{ 1/16., 2/16., 1/16. }
+	{ 1., 2., 1. },
+	{ 2., 4., 2. },
+	{ 1., 2., 1. }
 };
+unsigned int coeff = 16;
+
 #endif
+
 
 int main()
 {
 	const char * in_file = "lena-bw.bmp";
 	const char * outfile = "output.bmp";
-#if 1
 	unsigned int width, height;
 	unsigned char * inputimg = BMPread(in_file, &width, &height);
-#else	
-	unsigned int width = 16, height = 16;
-	unsigned char inputimg [64] =
-	{
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-		0, 1, 1, 0, 1, 2, 2, 1, 1, 2, 2, 1, 0, 1, 1, 0,
-	};
-#endif
+
 	unsigned char *outputimg = (unsigned char *) malloc(width * height * sizeof(unsigned char));
 	
-	int kend = KERNEL_SIZE / 2, kstart = -kend;
-	printf("kstart %d kend %d\n", kstart, kend);
+	_printf("Kernel size %d x %d\n", KERNEL_SIZE, KERNEL_SIZE);
 	
 	for(int y=0; y<height; y++)
 		for(int x=0; x<width; x++)
 		{
 			float acc = 0.;
-			for(int ky = 0; ky < KERNEL_SIZE; ky++)
-				for(int kx = 0; kx < KERNEL_SIZE; kx ++)
+			for(int ky = KERNEL_SIZE / -2; ky < KERNEL_SIZE / 2; ky++)
+				for(int kx = KERNEL_SIZE / -2; kx < KERNEL_SIZE / 2; kx ++)
 				{
-					int py = y + ky - KERNEL_SIZE * 2;
-					int px = x + kx - KERNEL_SIZE * 2;
-					//printf("y %d x %d ky %d kx %d py %d px %d", y, x, ky, kx, py, px);
+					int py = y + ky;
+					int px = x + kx;
+					_printf("y %d x %d ky %d kx %d py %d px %d", y, x, ky, kx, py, px);
 					if(px >= 0 && py >= 0)
 					{
 						float in = (float) inputimg[py * width + px];
-						float k = kernel[ky][kx];
+						float k = kernel[ky + KERNEL_SIZE / 2][kx + KERNEL_SIZE / 2];
 						float res = in * k;
 						acc +=  res;
-						//printf("-> in %f k(%d, %d) %f res %f acc %f", in, ky, kx, k, res, acc);
+						_printf("-> in %f k(%d, %d) %f res %f acc %f", in, ky, kx, k, res, acc);
 					}
-					//printf("\n");
+					_printf("\n");
 				}
-			outputimg[y * width + x] = acc;
+			outputimg[y * width + x] = acc / coeff;
 		}
 	
 	
     BMPwrite(outfile, &outputimg[0], width, height);
 	
 	free(inputimg);
+	
+	return 0;
 }

@@ -12,4 +12,11 @@ void BMPwrite(const char * fname, unsigned char *data, unsigned int width, unsig
 ///
 unsigned char * BMPread(const char *fname, unsigned int *width, unsigned int *height);
 
+
+///
+/// Create a height x width gaussian kernel.
+/// TODO Fix this, it does not work properly
+///
+void getGaussian(int height, int width, double sigma);
+
 #endif
