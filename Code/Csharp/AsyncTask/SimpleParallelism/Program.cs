@@ -26,25 +26,7 @@ namespace SimpleParallelism
 
             Console.WriteLine("Joined thread. Now, we can exit!");
         }
-
-        class BoxedInt
-        {
-            public int Counter;
-
-            public static IList<BoxedInt> ToList(int[] array)
-            {
-                var ret = new List<BoxedInt>();
-
-                foreach (var a in array)
-                    ret.Add(new BoxedInt() { Counter = a });
-                return ret;
-            }
-            public override string ToString()
-            {
-                return Counter.ToString();
-            }
-        }
-
+                
         public static void ListExample()
         {
             var list = new List<int>();
@@ -105,7 +87,7 @@ namespace SimpleParallelism
             for (int i = 0; i < size; i++)
                 Console.WriteLine($"A[{i}] is {A[i]}");
 
-            var boxedList = BoxedInt.ToList(A);
+            var boxedList = BoxedInt.CreateList(A);
             Parallel.ForEach(boxedList, (item) =>
             {
                 item.Counter *= 2;
@@ -117,11 +99,38 @@ namespace SimpleParallelism
             Console.ReadLine();
         }
 
+        public static void RunAction(Action action)
+        {
+            action();
+        }
+
+        public static void LambdaExample()
+        {
+            Action printHelloWorldLambda = () => Console.WriteLine("Hello World! I am a lambda function!");
+
+            printHelloWorldLambda();
+
+            Action anotherAction = printHelloWorldLambda;
+
+            RunAction(printHelloWorldLambda);
+
+            RunAction(anotherAction);
+
+            RunAction(() =>
+            {
+                Console.WriteLine("Hello World! I am a lambda fuction, " +
+                    "inlined in the 'RunAction' function call!");
+            });
+
+            Console.ReadLine();
+        }
+
         static void Main(string[] args)
         {
             //TaskExample();
             //ListExample();
-            ArrayExample();
+            //ArrayExample();
+            LambdaExample();
             return;
         }
     }
