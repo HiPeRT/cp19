@@ -246,9 +246,9 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsyncTasls\AsyncTasls.csproj">
+    <ProjectReference Include="..\AsyncTasls\AsyncTasks.csproj">
       <Project>{7e1cfdb8-8428-48bd-98f3-48bec9c19cf3}</Project>
-      <Name>AsyncTasls</Name>
+      <Name>AsyncTasks</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
