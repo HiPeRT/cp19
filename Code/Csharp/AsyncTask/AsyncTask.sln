@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncWebApp", "AsyncWebApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTasks", "AsyncTasks\AsyncTasks.csproj", "{7E1CFDB8-8428-48BD-98F3-48BEC9C19CF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleParallelism", "SimpleParallelism\SimpleParallelism.csproj", "{015D10E3-9DF0-4F50-8CCE-FF2828BFADAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7E1CFDB8-8428-48BD-98F3-48BEC9C19CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E1CFDB8-8428-48BD-98F3-48BEC9C19CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E1CFDB8-8428-48BD-98F3-48BEC9C19CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015D10E3-9DF0-4F50-8CCE-FF2828BFADAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015D10E3-9DF0-4F50-8CCE-FF2828BFADAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015D10E3-9DF0-4F50-8CCE-FF2828BFADAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015D10E3-9DF0-4F50-8CCE-FF2828BFADAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
