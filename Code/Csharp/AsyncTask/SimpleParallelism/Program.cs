@@ -64,8 +64,7 @@ namespace SimpleParallelism
             });
 
             Console.WriteLine($"count now is {count}");
-            Console.WriteLine($"countObj.Counte now is {countObj.Counter}");
-            Console.ReadLine();
+            Console.WriteLine($"countObj.Count now is {countObj.Counter}");
         }
 
         public static void ArrayExample()
@@ -81,7 +80,8 @@ namespace SimpleParallelism
 
             Parallel.ForEach(A, (item) =>
             {
-                Console.WriteLine($"item is {item}");
+                item *= 2;
+                Console.WriteLine($"item now is {item}");
             });
 
             for (int i = 0; i < size; i++)
@@ -96,7 +96,6 @@ namespace SimpleParallelism
             foreach (var i in boxedList)
                 Console.WriteLine(i);
 
-            Console.ReadLine();
         }
 
         public static void RunAction(Action action)
@@ -122,15 +121,34 @@ namespace SimpleParallelism
                     "inlined in the 'RunAction' function call!");
             });
 
-            Console.ReadLine();
+        }
+
+        static void ClosureExample()
+        {
+            const int size = 10;
+            int[] A = new int[size];
+
+            for (int i = 0; i < size; i++)
+                A[i] = i;
+
+            foreach (var i in A)
+            {
+                Task.Run(() =>
+                {
+                    Thread.Sleep(1000);
+                    Console.WriteLine(i.ToString());
+                });
+            }
         }
 
         static void Main(string[] args)
         {
+            //ClosureExample();
             //TaskExample();
             //ListExample();
-            //ArrayExample();
-            LambdaExample();
+            ArrayExample();
+            //LambdaExample();
+            Console.ReadLine();
             return;
         }
     }
