@@ -45,7 +45,7 @@ namespace AsyncTasks
         {
             // Execution is synchronous here
             var client = new HttpClient();
-            var t = client.GetStringAsync(url);
+            Task<string> t = client.GetStringAsync(url);
 
             // This is synchronous
             // This code is executed immediately, and it returns a Task<string>
@@ -83,8 +83,8 @@ namespace AsyncTasks
         static void Main(string[] args)
         {
             //var r = await AsyncCallWrapper(); // This is not legal
-            //var r = AsyncCallWrapper();
-            var r = GetHtmlWithTask(Url);
+            var r = AsyncCallWrapper(Url);
+            //var r = GetHtmlWithTask(Url);
 
             Console.WriteLine("[Main]  I am doing something asynchronously, here");
 
@@ -93,6 +93,8 @@ namespace AsyncTasks
             Console.WriteLine($"[Main] r is {r.Result}");
 
             Console.WriteLine("[Main] After reading result");
+
+            Console.ReadLine();
         }
     }
 }
