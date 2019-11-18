@@ -19,7 +19,6 @@ int main (int argc, char* argv[])
   MPI_Comm_rank(MPI_COMM_WORLD, &id);
   
   MPI_Scatter(A, 1, MPI_INT, &local_A, 1, MPI_INT, 0, MPI_COMM_WORLD);
-//  MPI_Allreduce(&a, &b, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 
   printf("%d local_A is: %d\n", id, local_A);
   
