@@ -3,9 +3,7 @@
 
 int main (int argc, char* argv[])
 {
-  double PI_25 = 3.141592653589793238462643;
   int id, p;
-  double A,B;
   int n;
   //Inizializzo la libreria MPI
   MPI_Init(&argc, &argv);
