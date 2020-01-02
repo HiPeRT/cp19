@@ -9,7 +9,7 @@
 <li>Per ottenere la lode, e' necessario sostenere un orale, o un progetto</li>
 <li>Per sostenere l'orale, o per un progetto, si prega di contattare il docente</li>
 <li>In tutti gli altri casi, i voti verranno registrati all inizio di Febbraio</li>
-<li>Gli studenti possono presentarsi agli appelli successivi (10 e 20 Gennaio 2020). Qualora in tale appello consegnassero, perderebbero il voto precedentemente acquisito</li>
+<li>Gli studenti possono presentarsi agli appelli successivi (10 e 24 Gennaio 2020). Qualora in tale appello consegnassero, perderebbero il voto precedentemente acquisito</li>
 <li>Se il vostro voto non compare, si prega di contattare il docente via mail.</li>
 </ul>
 
