@@ -8,7 +8,7 @@
 <li>Chi non ha ottenuto 18 nello scritto, puo' comunque sostenere un orale per arrivare alla sufficienza</li>
 <li>Per ottenere la lode, e' necessario sostenere un orale, o un progetto</li>
 <li>Per sostenere l'orale, o per un progetto, si prega di contattare il docente</li>
-<li>In tutti gli altri casi, i voti verranno registrati all inizio di Febbraio</li>
+<li>In tutti gli altri casi, i voti verranno registrati all inizio di Febbraio, a meno che lo studente non contatti direttamente il docente per rifiutare espressamente il voto</li>
 <li>Gli studenti possono presentarsi agli appelli successivi (10 e 24 Gennaio 2020). Qualora in tale appello consegnassero, perderebbero il voto precedentemente acquisito</li>
 <li>Se il vostro voto non compare, si prega di contattare il docente via mail.</li>
 </ul>
