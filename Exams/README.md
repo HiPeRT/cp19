@@ -46,7 +46,7 @@
 | 122584    | 13.5                        | 23    |                                                                   |
 | 119371    | 18.5                        | 29    | Accettato, da registrare                                          |
 | 117595    | 12                          | 18    |                                                                   |
-| 122089    | 5.5                         | INS   |                                                                   |
+| 122089    |                             | INS   |                                                                   |
 
 # Risultati della prova del 20/12/2019
 
