@@ -9,9 +9,44 @@
 <li>Per ottenere la lode, e' necessario sostenere un orale, o un progetto</li>
 <li>Per sostenere l'orale, o per un progetto, si prega di contattare il docente</li>
 <li>In tutti gli altri casi, i voti verranno registrati all inizio di Febbraio, a meno che lo studente non contatti direttamente il docente per rifiutare espressamente il voto</li>
-<li>Gli studenti possono presentarsi agli appelli successivi (10 e 24 Gennaio 2020). Qualora in tale appello consegnassero, perderebbero il voto precedentemente acquisito</li>
+<li>Gli studenti possono presentarsi agli appelli successivi (24 Gennaio 2020). Qualora in tale appello consegnassero, perderebbero il voto precedentemente acquisito</li>
 <li>Se il vostro voto non compare, si prega di contattare il docente via mail.</li>
 </ul>
+
+# Risultati della prova del 10/01/2020
+
+| Matricola | Punteggio risposta multipla | Esito | Note                                                              |
+|-----------|-----------------------------|-------|-------------------------------------------------------------------|
+| 112254    | 17                          | 24    |                                                                   |
+| 118488    | 9                           | INS   |                                                                   |
+| 120990    | 12                          | 20    |                                                                   |
+| 111992    |                             | ASS   |                                                                   |
+| 118908    | 11                          | 18    |                                                                   |
+| 113193    | 17                          | 24    |                                                                   |
+| 106646    | 13.5                        | 21    |                                                                   |
+| 118396    | 11.5                        | 15.5  | Orale necessario                                                  |
+| 110718    | 13                          | 19    |                                                                   |
+| 118354    | 13                          | 23    |                                                                   |
+| 110802    | 17.5                        | 26    |                                                                   |
+| 119901    | 13.5                        | 20    | Contattare il professore per concordare la registrazione del voto |
+| 118349    | 13                          | 18    |                                                                   |
+| 79171     |                             | ASS   |                                                                   |
+| 117343    | 18.5                        | 29    |                                                                   |
+| 99564     | 20                          | 29    |                                                                   |
+| 120924    | 15                          | 25    |                                                                   |
+| 113073    | 15                          | 24    |                                                                   |
+| 117164    | 13.5                        | 24    |                                                                   |
+| 118307    |                             | ASS   |                                                                   |
+| 122254    | 15.5                        | 26    |                                                                   |
+| 119379    | 12.5                        | 18    |                                                                   |
+| 122084    | 19                          | 30    |                                                                   |
+| 111077    | 11.5                        | 21    |                                                                   |
+| 124699    | 15.5                        | 24    |                                                                   |
+| 120958    | 16                          | 25    |                                                                   |
+| 122584    | 13.5                        | 23    |                                                                   |
+| 119371    | 18.5                        | 29    | Accettato, da registrare                                          |
+| 117595    | 12                          | 18    |                                                                   |
+| 122089    | 5.5                         | INS   |                                                                   |
 
 # Risultati della prova del 20/12/2019
 
