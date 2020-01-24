@@ -9,9 +9,28 @@
 <li>Per ottenere la lode, e' necessario sostenere un orale, o un progetto</li>
 <li>Per sostenere l'orale, o per un progetto, si prega di contattare il docente</li>
 <li>In tutti gli altri casi, i voti verranno registrati all inizio di Febbraio, a meno che lo studente non contatti direttamente il docente per rifiutare espressamente il voto</li>
-<li>Gli studenti possono presentarsi agli appelli successivi (24 Gennaio 2020). Qualora in tale appello consegnassero, perderebbero il voto precedentemente acquisito</li>
 <li>Se il vostro voto non compare, si prega di contattare il docente via mail.</li>
-</ul>
+</ul>z
+
+# Risultati della prova del 24/01/2020
+
+| Matricola | Punteggio risposta multipla | Esito | Note                                 |
+|-----------|-----------------------------|-------|--------------------------------------|
+| 118488    | 8.5                         | INS   |                                      |
+| 124365    | 17.5                        | 24    |                                      |
+| 76602     | 8.5                         | INS   |                                      |
+| 111992    |                             | ASS   |                                      |
+| 117655    | 17.5                        | 30    | Accettato, dopo orale                |
+| 119325    | 8                           | INS   |                                      |
+| 106646    | 14.5                        | 23    | Accettato                            |
+| 118396    |                             | RIT   |                                      |
+| 116618    | 11                          | 15    | Orale necessario                     |
+| 112880    | 16.5                        | 21    |                                      |
+| 122232    | 17.5                        | 30L   | Da registrare, dopo orale            |
+| 108600    | 11                          | 20    |                                      |
+| 120967    | 17                          | 25    |                                      |
+| 112405    | 15                          | 26    |                                      |
+| 121928    | 14                          | 19    |                                      |
 
 # Risultati della prova del 10/01/2020
 
